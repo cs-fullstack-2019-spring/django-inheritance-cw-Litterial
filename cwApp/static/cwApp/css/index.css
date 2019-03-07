@@ -1,3 +1,51 @@
 body{
-    background-color: mintcream;
+    margin: 2% 15%;
+}
+
+div{
+    text-align: center;
+    clear:both;
+}
+
+.homegrid
+{
+    display: grid;
+
+    grid-template-areas:
+    'section1 section2'
+    'secton3 section4';
+    clear:both;
+}
+
+
+#s1,#s2,#s3,#s4
+{
+    background:blue;
+}
+
+
+#s1{
+    grid-area:section1;
+}
+
+#s2{
+    grid-area:section2;
+}
+
+#s3{
+    grid-area:section3;
+}
+
+#s4{
+    grid-area:section4;
+}
+
+
+section
+{
+position:relative;
+    float: left;
+    border:1px solid gray
+
+
 }
