@@ -11,20 +11,25 @@ def resources(request):  #resources
     return render(request,'cwApp/resources.html',)
 
 def contact(request):  #contact
-    form=ContactForm(request.POST or None)
-    if form.is_valid() and request.method =='POST':
-        form.save()
-        return redirect('submit')
-    else:
-        form=ContactForm(request.POST)
-        context={
-            'errors':form.errors,
-            'form':form,
-        }
-
+    form=ContactForm(request.POST or None) #get
+    context={
+        'form':form,
+    }
+    if request.method =='POST':  #if post request
+        if form.is_valid():   #if valid form
+            form.save()
+            return redirect('submit')
+        else:  #otherwise an error message will appear after they submit the form
+            form=ContactForm(request.POST)
+            context={
+                'errors':form.errors,
+                'form':form,
+            }
+            return render(request,'cwApp/contact.html',context)
     return render(request,'cwApp/contact.html',context)
 
-def submit(request):
+
+def submit(request): #conformation page
     return render(request,'cwApp/submit.html')
 
 def secret(request):

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'cwApp/css/index.css' %}">
 </head>
 <body>
-<div>
+<div class="container">
     <nav>
 <a href="{% url 'index' %}"><img src="{% static 'cwApp/images/download.png' %}" alt="Codecrew Logo"></a>
 <a href="{% url 'about' %}">About Us</a>
@@ -16,11 +16,9 @@
 <a href="{% url 'contact' %}">Contact</a>
     </nav>
 
-</div>
 
 
-<section>
-
+<section class="sidebar">
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in odio augue. Ut nec faucibus libero. Proin pulvinar sapien et augue fringilla finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In urna ante, pellentesque vel lectus eget, malesuada commodo orci. Nunc placerat finibus nisl, non congue felis tempus a. Aliquam viverra dui lectus, sit amet mattis mauris placerat ut. Quisque nec nisl aliquet, hendrerit ligula eu, consequat felis.
 
@@ -32,11 +30,15 @@
 
     Proin sit amet turpis viverra, venenatis dolor non, scelerisque sapien. Duis a commodo eros. Aliquam facilisis, sapien non fermentum faucibus, metus tellus porttitor lorem, ac suscipit turpis libero in lacus. Pellentesque et tellus nec diam blandit pretium. Phasellus vulputate magna nunc, ac faucibus arcu condimentum a. Suspendisse porta vel dolor at pretium. Praesent volutpat nisi vel eros bibendum elementum. Praesent suscipit, tortor ut ultrices tempor, mi nisi luctus lorem, id vulputate justo ex eu risus. Nulla facilisi. Nulla malesuada tortor lectus, sit amet gravida metus mollis vel. Quisque est turpis, feugiat quis malesuada sit amet, pretium eget quam. Aliquam erat volutpat. Fusce dui arcu, suscipit ut semper sit amet, pulvinar ut augue. Etiam nunc nisi, mattis ut risus vel, imperdiet venenatis leo. Phasellus blandit mattis ornare. Duis ac sapien eget urna tincidunt sodales sed et velit.
 </section>
+<article class="mainsection">
 {% block header %}
 {% endblock header %}
-
+</article>
+<footer>
 {% block footer %}
 Footer test
 {% endblock footer %}
+</footer>
+</div>
 </body>
 </html>

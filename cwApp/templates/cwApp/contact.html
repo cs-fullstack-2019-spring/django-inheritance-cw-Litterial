@@ -1,7 +1,6 @@
 {% extends 'cwApp/base.html' %}
 
 {% block header %}
-
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
